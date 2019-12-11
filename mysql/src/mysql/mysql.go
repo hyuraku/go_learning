@@ -2,15 +2,15 @@ package main
 
 import (
     "database/sql"
-    "fmt"
+    // "fmt"
     "log"
-    "time"
+    // "time"
 
     _ "github.com/go-sql-driver/mysql"
 )
 
 func main() {
-    db, err := sql.Open("mysql", "root:root@(127.0.0.1:3306)/root?parseTime=true")
+    db, err := sql.Open("mysql", "root:@/test_mysql_database?parseTime=true")
     if err != nil {
         log.Fatal(err)
     }
