@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>template</title>
+</head>
+
+<body>
+  <h1>{{.PageTitle}}</h1>
+  <ul>
+    {{range .Todos}}
+      {{if .Done}}
+        <li class="done">{{.Title}}</li>
+        <p>{{.Num}}</p>
+      {{else}}
+        <li>{{.Title}}</li>
+      {{end}}
+    {{end}}
+  </ul>
+</body>
+
+</html>
